@@ -1,0 +1,191 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', 'Helvetica', sans-serif;
+    margin: 0;
+    color: white;
+}
+
+/* Images */
+
+.activity-img,
+.location-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.guide-img {
+    width: 180px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+/* Typography */
+
+h1,
+.hero-subtitle,
+.activities-title,
+.activity-title,
+.locations-title,
+.location-title,
+.guide-name {
+    font-weight: 700;
+}
+
+h1,
+.hero-subtitle {
+    border-radius: 5px;
+}
+
+h1 {
+    font-size: 1.5rem;
+    margin: 0;
+    background-color: #8B7F7A;
+    padding: .1em .375em;
+}
+
+.hero-subtitle {
+    font-size: .875rem;
+    max-width: 350px;
+    background-color: #092E41;
+    padding: .27em 1.5em;
+    text-align: center;
+}
+
+.activities-title,
+.locations-title {
+    font-size: 1.125rem;
+    margin-top: 0;
+    margin-bottom: 2em;
+}
+
+.guide-title {
+    font-size: 1.25rem;
+}
+
+/* Layout */
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.hero-container {
+    background-image: url("/brasov.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    aspect-ratio: 4 / 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.activity-container,
+.locations-container {
+    text-align: center;
+    padding: 2em;
+}
+
+.activity-container {
+    background-color: #5B6974;
+}
+
+.locations-container {
+    background-color: #5F544A
+}
+
+.activities,
+.locations {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+
+.guide-card {
+    background-color: #092E41;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    padding: 1.25em 1em;
+}
+
+/* Media queries */
+
+@media (min-width: 768px) {
+
+    /* Images */
+
+    .activity-img,
+    .location-img {
+        width: 130px;
+        height: 130px;
+    }
+
+    /* Typography */
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.125rem;
+        max-width: 450px;
+    }
+
+    .activity-title,
+    .activity-description,
+    .location-title,
+    .location-description,
+    .guide-description {
+        font-size: 1.125rem;
+    }
+
+    .activities-title,
+    .locations-title,
+    .guide-title {
+        font-size: 1.5rem;
+    }
+
+    /* Layout */
+
+    .hero-container {
+        aspect-ratio: 16 / 9;
+    }
+
+    .activities,
+    .locations {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .activity,
+    .location {
+        max-width: 200px;
+    }
+
+    .guide-card {
+        gap: 1.5em;
+    }
+
+}
+
+@media (min-width: 1024px) {
+    /* Layout */
+
+    .container {
+        max-width: 1100px;
+    }
+
+    .activity,
+    .location {
+        max-width: 250px;
+    }
+
+}
